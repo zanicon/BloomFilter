@@ -32,14 +32,16 @@ The Higher the size of the Bloom Filter, the lower the false positive rate. The 
 The application will start on `http://localhost:8080`.
 
 ## API Endpoints
+The application provides the following RESTful endpoints to interact with the Bloom Filter:
 
-```
-| HTTP Method | Endpoint              | Description                                        | Parameters |
-|------------|----------------------|----------------------------------------------------|------------|
-| POST       | /bloomfilter/add    | Adds a URL to the Bloom filter                    | url (query param, required) |
-| GET        | /bloomfilter/check  | Checks if a URL might be in the Bloom filter      | url (query param, required) |
-| POST       | /bloomfilter/reconfigure | Reconfigures the Bloom filter with new parameters | size (query param, optional), hashFunctionCount (query param, optional, max: 8) |
-```
+| HTTP Method | Endpoint                 | Description                                        | Parameters |
+|------------|-------------------------|----------------------------------------------------|------------|
+| POST       | `/bloomfilter/add`       | Adds a URL to the Bloom filter                    | `url` (query param, required) |
+| GET        | `/bloomfilter/check`     | Checks if a URL might be in the Bloom filter      | `url` (query param, required) |
+| POST       | `/bloomfilter/reconfigure` | Reconfigures the Bloom filter with new parameters | `size` (query param, optional), `hashFunctionCount` (query param, optional, max: 8) |
+
+
+
 
 ## Running Tests
 You can look at the following `BloomFilterControllerTest` to see a set of test to see the BloomFilter in action.
@@ -48,8 +50,6 @@ Run the tests using Gradle:
 ./gradlew test
 ```
 
-## License
-This project is licensed under the MIT License.
 
 
 
