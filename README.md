@@ -17,7 +17,7 @@ The Higher the size of the Bloom Filter, the lower the false positive rate. The 
 ### Running the Application
 1. Clone the repository:
    ```sh
-   git clone <repository-url>
+   git clone https://github.com/zanicon/BloomFilter.git
    cd bloomfilter
    ```
 2. Build the project using Gradle:
