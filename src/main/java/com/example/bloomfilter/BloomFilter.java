@@ -12,7 +12,7 @@ public class BloomFilter {
 
     public BloomFilter(int size, int hashFunctionCount) {
         this.size = size;
-        this.hashFunctionCount = hashFunctionCount;
+        this.hashFunctionCount = Math.min(hashFunctionCount, 8); // Ensure we don't exceed 8 hash functions;
         this.bitSet = new BitSet(size);
     }
 
@@ -42,7 +42,7 @@ public class BloomFilter {
      * @return
      */
     private int[] getHashes(String element)  {
-        MessageDigest digest = null;
+        MessageDigest digest;
         try {
             digest = MessageDigest.getInstance("SHA-256");
         } catch (NoSuchAlgorithmException e) {
