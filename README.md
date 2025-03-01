@@ -1,7 +1,7 @@
 # Bloom Filter Implementation in Java
 
 ## Overview
-This repository accompanies the following blog post. The application is a simple Spring Boot project that demonstrates the use of a Bloom Filter. It implements a Bloom Filter data structure and allows users to interact with it through various endpoints.
+This repository accompanies the following [blog post](https://aniefiok.com/blog/introduction-to-bloom-filters-in-java). The application is a simple Spring Boot project that demonstrates the use of a Bloom Filter. It implements a Bloom Filter data structure and allows users to interact with it through various endpoints.
 
 This Spring Boot application provides an implementation of a Bloom Filter for URL storage and lookup. It allows adding URLs to a Bloom Filter, checking if a URL might be in the filter, and reconfiguring the filter dynamically to change its size and number of hash functions.
 
